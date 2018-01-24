@@ -44,6 +44,7 @@ static NSInteger pageNumber = 8;
 - (void)initScrollView
 {
     UIScrollView *baseScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 100, kSelfWidth, 150)];
+    baseScrollView.layer.masksToBounds = YES;
     baseScrollView.backgroundColor = [UIColor redColor];
     baseScrollView.delegate = self;
     baseScrollView.pagingEnabled = YES;

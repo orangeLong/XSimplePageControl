@@ -39,10 +39,11 @@
     return self;
 }
 
-- (void)layoutSubviews
-{
-    [self initView];
-}
+//- (void)layoutSubviews
+//{
+//    [super layoutSubviews];
+//    [self initView];
+//}
 
 #pragma mark - init
 
@@ -108,9 +109,11 @@ static NSInteger pageControlTag = 555;
     NSUInteger originIndex = self.currentPage;
     UIButton *originBtn = [self viewWithTag:pageControlTag + originIndex];
     UIButton *otherBtn = [self viewWithTag:pageControlTag + index];
-    originBtn.backgroundColor = self.controlColor;
-    otherBtn.backgroundColor = self.controlSelectedColor;
+
     [UIView animateWithDuration:self.animationTime animations:^{
+        originBtn.backgroundColor = self.controlColor;
+        otherBtn.backgroundColor = self.controlSelectedColor;
+        
         for (NSUInteger i = MIN(originIndex, index); i <= MAX(originIndex, index); i++) {
             CGFloat addX = 0.f;
             if (i == MIN(originIndex, index)) {
@@ -134,6 +137,12 @@ static NSInteger pageControlTag = 555;
 }
 
 #pragma mark - setter
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    [self initView];
+}
 
 - (void)setPageNumber:(NSUInteger)pageNumber
 {
