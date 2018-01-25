@@ -78,7 +78,7 @@ static NSInteger pageNumber = 8;
     self.customPageControl.controlColor = [UIColor redColor];
     self.customPageControl.controlSelectedColor = [UIColor orangeColor];
     self.customPageControl.controlSpacing = 10;
-    self.customPageControl.animationTime = 3.f;
+    self.customPageControl.animationTime = 1.f;
     [self setClickBlcok:self.customPageControl];
     [self.view addSubview:self.customPageControl];
 }
