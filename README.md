@@ -1,3 +1,3 @@
 # XSimplePageControl
 the simple custom pagecontrol
-https://github.com/orangeLong/XSimplePageControl/raw/master/show.gif
+![效果图](https://github.com/orangeLong/XSimplePageControl/raw/master/show.gif)
